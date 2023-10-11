@@ -1,0 +1,15 @@
+.tariff-options {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px) {
+    .tariff-options {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    
+}
+
+

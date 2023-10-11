@@ -1,0 +1,7 @@
+.background-container {
+    background: url('../img/background.png') center / cover no-repeat fixed;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+

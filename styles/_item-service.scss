@@ -1,0 +1,78 @@
+.item-service {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 33.333%;
+    &:not(:last-child) {
+        margin: 0px 18px 0px 0px;
+    }
+
+    &__icon {
+        margin: 0px auto 40px;
+        &::before {
+            content:'';
+            display: block;
+            width: 100px;
+            height: 100px;
+        }
+
+        &--apartment::before {
+            background-image: url('../icons/services__icon-1.svg');
+
+        }
+        &--private-house::before {
+            background-image: url('../icons/services__icon-2.svg');
+
+        }
+        &--supervision::before {
+            background-image: url('../icons/services__icon-3.svg');
+
+        }
+    }
+
+    &__title {
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 0.875rem;
+        line-height: 1.3;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .item-service {
+        &__icon{
+            margin: 0px auto 20px;
+        }
+    
+        &__title {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+    
+        &__text {
+            font-size: 0.75rem;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .item-service {
+        &:not(:last-child) {
+            margin: 0px 0px 20px 0px;
+        }
+    
+        &__title {
+            font-size: 1rem;
+        }
+    
+        &__text {
+            font-size: 0.75rem;
+            max-width: 430px;
+            margin: 0px auto;
+        }
+    }
+}

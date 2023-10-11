@@ -1,0 +1,10 @@
+.service-options {
+    display: flex;
+}
+
+@media screen and (max-width:768px) {
+    .service-options {
+        flex-direction: column;
+    }
+
+}

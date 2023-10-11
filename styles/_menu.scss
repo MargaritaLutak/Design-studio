@@ -1,0 +1,119 @@
+.menu {
+
+    &__icon {
+        display: none;
+    }
+
+    &__link {
+        color: $secondary-color;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        letter-spacing: 0.065em;
+        transition: all 0.3s;
+
+        &:not(:last-child)::after {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 1px;
+            background-color: $secondary-color;
+            vertical-align: middle;
+            margin: 0px 25px;
+        }
+
+        &:hover {
+            color:rgb(214, 214, 214);
+
+        }
+    }
+}
+
+
+@media screen and (max-width:767px) {
+    .menu {
+        &__icon {
+            position: relative;
+            display: block;
+            width: 30px;
+            height: 24px;
+            cursor: pointer;
+            z-index: 2;
+
+            &::before {
+                @include burger-style;
+                content: '';
+                top: 0;
+            }
+
+            &::after {
+                @include burger-style;
+                content: '';
+                bottom: 0;
+            }
+
+            span {
+                @include burger-style;
+                top: 50%;
+                transform: translate(0px, -50%);
+            }
+
+            &.active::before {
+                top: 50%;
+                transform: rotate(-45deg) translate(0px, -50%);
+            }
+
+            &.active::after {
+                bottom: 50%;
+                transform: rotate(45deg) translate(0px, 50%);
+            }
+            &.active span {
+                transform: scale(0) translate(0px, -50%);
+            }
+        }
+
+
+
+
+        &__body {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            overflow: auto;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color:rgba(130, 130, 130, 0.9);
+            padding: 130px 30px 100px;
+            align-items: center;
+            transition: all 0.3s ease 0s;
+
+            &::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 75px;
+                background-color: rgb(130, 130, 130);
+                z-index: 2;
+            }
+
+            &.active {
+                left:0;
+            }
+
+            &.active::before {
+                left:0;
+            }
+        }
+
+        &__link:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        &__link:not(:last-child)::after {
+            display: none;
+        }
+    }
+}

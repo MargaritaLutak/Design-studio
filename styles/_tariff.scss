@@ -1,0 +1,9 @@
+.tariff {
+   background-color: $bg-color;
+
+    &__text {
+        @include under-heading-text-style;
+        @include adaptiv-font(23,17);
+    }
+}
+

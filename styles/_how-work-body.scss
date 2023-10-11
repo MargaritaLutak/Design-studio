@@ -1,0 +1,116 @@
+.how-work-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__step {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        &:not(:last-child)::after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 1px;
+            width: 50px;
+            background-color: rgba(179, 179, 179, 1);
+            bottom: -25px;
+            left:25px;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__icon {
+        margin-right: 45px;
+        z-index: 2;
+        background-color: white;
+
+        &::before {
+            content:'';
+            display: block;
+            width:100px;
+            height: 100px; 
+            
+        }
+
+        &--step-1::before {
+            background-image: url('../icons/how-we-work__icon-1.svg');
+        }
+        &--step-2::before {
+            background-image: url('../icons/how-we-work__icon-2.svg');
+        }
+        &--step-3::before {
+            background-image: url('../icons/how-we-work__icon-3.svg');
+        }
+        &--step-4::before {
+            background-image: url('../icons/how-we-work__icon-4.svg');
+        }
+    }
+
+    &__title {
+        font-size: 1.375rem;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+
+    &__text {
+        max-width: 679px;
+    }
+
+}
+
+
+@media screen and (max-width:1024px) {
+.how-work-body {
+    &__step {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        font-size: 1.25rem;
+    }
+    &__text {
+        font-size: 0.875rem;
+    }
+
+    &__icon {
+        margin-right: 25px;
+    }
+}
+
+}
+
+@media screen and (max-width:424px) {
+    .how-work-body {
+        &__step {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__title {
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+        &__text {
+            font-size: 0.75rem;
+        }
+
+        &__icon {
+            margin-right: 15px;
+
+        }
+        &__icon img{
+            width:80px;
+
+        }
+    }
+    }

@@ -1,0 +1,25 @@
+.studio {
+    background-color: $bg-color;
+
+    &__image-container {
+        margin: 0px auto 30px;
+    }
+    &__image {
+        max-width: 100%;
+    }
+
+    &__text {
+        @include adaptiv-font(19,15);
+        line-height: 1.35;
+        max-width: 760px;
+        margin: 0px auto;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .studio {
+        &__image-container {
+            max-width: 636px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.header-content {
+    flex: 1 1 auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px auto;
+    color:$secondary-color;
+    
+
+    &__title {
+        @include adaptiv-font(50,30);
+        line-height: 1.3;
+        letter-spacing: 0.01em;
+        font-weight: 700;
+    }
+
+    &__text {
+        @include adaptiv-font(22,18);
+        font-size: 1.375rem;
+        margin: 50px 0px;
+    }
+
+    &__button--yellow {
+        @include button-style($bg-btn-color, $secondary-color, none)
+    }
+}
+

@@ -1,0 +1,8 @@
+.service {
+    
+    &__text {
+        @include under-heading-text-style;
+        @include adaptiv-font(23,17);
+        
+    }
+}
