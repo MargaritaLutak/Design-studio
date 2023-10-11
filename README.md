@@ -1,6 +1,6 @@
 ## Проект DesignStudio
 
-:arrow_right: [ссылка на проект](https://margaritalutak.github.io/Design-studio/#tariff)
+:arrow_right: [ссылка на проект](https://margaritalutak.github.io/Design-studio/)
 
 +   Реализация адаптивного дизайна для обеспечения оптимального пользовательского опыта на различных устройствах
 +   Реализация бургер меню и плавной прокрутки к нужному блоку сайта c помощью JavaScript
